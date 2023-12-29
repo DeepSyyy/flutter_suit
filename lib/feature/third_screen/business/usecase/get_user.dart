@@ -8,7 +8,7 @@ class GetUser {
 
   GetUser(this.repository);
 
-  Future<Either<Failure, DataEntity>> call({required String pageTotal}) async {
+  Future<Either<Failure, DataEntity>> call({required int pageTotal}) async {
     return await repository.getUser(pageTotal: pageTotal);
   }
 }

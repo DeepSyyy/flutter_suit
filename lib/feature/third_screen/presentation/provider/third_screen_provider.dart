@@ -13,7 +13,7 @@ class ThirdScreenProvider extends ChangeNotifier {
   ThirdScreenProvider({this.dataEntities, this.failure});
 
   void eitherFailureOrDataEntity({
-    required String pageTotal,
+    required int pageTotal,
   }) async {
     try {
       UserRepostoryImpl repository = UserRepostoryImpl(

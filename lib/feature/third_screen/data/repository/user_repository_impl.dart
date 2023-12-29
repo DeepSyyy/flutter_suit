@@ -8,8 +8,7 @@ class UserRepostoryImpl implements ThirdScreenRepository {
   final UserRemoteDataSource remoteDataSource;
   UserRepostoryImpl({required this.remoteDataSource});
   @override
-  Future<Either<Failure, DataModel>> getUser(
-      {required String pageTotal}) async {
+  Future<Either<Failure, DataModel>> getUser({required int pageTotal}) async {
     try {
       final result = await remoteDataSource.getUser(pageTotal: pageTotal);
       return Right(result);
